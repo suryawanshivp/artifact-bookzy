@@ -11,6 +11,7 @@
 	<groupId>com.piedpiper</groupId>
 	<artifactId>artifact-bookzy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>artifact-bookzy</name>
 	<description>Building a web app for an online book shop named Bookzy</description>
 	<properties>
@@ -31,6 +32,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 <!--			<version>4.13.2</version>                   -->
+			<scope>test</scope>
 		</dependency>
 <!--	<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -43,6 +45,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+						<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
