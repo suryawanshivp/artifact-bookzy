@@ -18,26 +18,25 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
+<!--instruct spring boot not to use inbuilt tomcat;deployment would be on remote tomcat -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+<!--		<artifactId>spring-boot-starter-web</artifactId>   earlier     -->
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
+<!--comment below to use junit only
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency>                                      -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 <!--			<version>4.13.2</version>                   -->
 			<scope>test</scope>
-		</dependency>
-<!--	<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>3.10.0</version>                      
-		</dependency>										-->
+		</dependency>									
 	</dependencies>
 	<build>
 		<plugins>
