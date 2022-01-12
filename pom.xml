@@ -21,7 +21,7 @@
 <!--instruct spring boot not to use inbuilt tomcat;deployment would be on remote tomcat -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -29,6 +29,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
